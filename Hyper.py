@@ -5,7 +5,9 @@ import getpass
 from datetime import datetime
 import time
 import random
-
+import cv2
+import numpy as np
+from playsound import playsound
 
 platform = platform.platform()
 
@@ -49,6 +51,7 @@ print(banner)
 os.system('title Hyper - unofficialdxnny')
 
 description = '''
+Hyper CLI
 
 Hey! Im unofficialdxnny and this is 'Hyper'
 
@@ -1084,9 +1087,16 @@ anime = f'''
 
 
 '''
-while True:
-    
-    
+
+hyper_help = f'''
+Hyper CLI - Help
+
+hyper :  This command shows the applications description
+hyper show art : This command prints asscii art to the terminal
+
+
+'''
+while True:  
     maininput = input(f' Hyper@{username}> ').lower()
     
 
@@ -1100,11 +1110,15 @@ while True:
         print('')
         print(description)
         print('')
+        print(hyper_help)
+        print('')
 
     elif maininput == 'hyper --anime show art':
         print('')
         print(anime)
         print('')
-        
+      
+    # elif maininput == 'hyper bad apple play.console':
+      
     else:
       os.system(f'{maininput}')
