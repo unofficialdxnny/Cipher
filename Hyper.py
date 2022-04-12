@@ -5,7 +5,7 @@ import getpass
 from datetime import datetime
 import time
 import random
-from win10toast import ToastNotifier
+
 
 platform = platform.platform()
 
@@ -48,17 +48,27 @@ os.system('cls')
 print(banner)
 os.system('title Hyper - unofficialdxnny')
 
+description = '''
 
+Hey! Im unofficialdxnny and this is 'Hyper'
+
+Hyper can be used to execute entered commands
+perform advanced administrative functions. 
+Hyper can also be used to troubleshoot and solve certain kinds of Windows issues.
+
+'''
 while True:
     
 
-    maininput = input(f' Hyper@{username}> ')
+    maininput = input(f' Hyper@{username}> ').lower()
     os.system(f'{maininput}')
 
 
     if maininput == 'cls':
         os.system('cls')
         print(banner)
+
+ 
 
     elif maininput == '':
         print('')
@@ -68,5 +78,7 @@ while True:
         print(banner)
         print('')
 
-#    elif maininput == ['hyper hint', 'hyper hint ', ' hyper hint']:
-        
+    elif maininput == 'hyper':
+        print('')
+        print(description)
+        print('')
