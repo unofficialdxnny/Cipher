@@ -6,6 +6,7 @@ from datetime import datetime
 import time
 import random
 
+
 platform = platform.platform()
 
 
@@ -57,26 +58,8 @@ Hyper can also be used to troubleshoot and solve certain kinds of Windows issues
 
 '''
 
-while True:
-    
-    
-    maininput = input(f' Hyper@{username}> ').lower()
-    if maininput == 'cls':
-        os.system('cls')
-        print(banner)
-        
+anime = f'''
 
-
-    elif maininput == 'hyper':
-        print('')
-        print(description)
-        print('')
-
-    elif maininput == 'hyper --anime show art':
-        print('')
-        print(f'''
-        
-        
 
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░    ▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓                                                            ░░                                    ░░▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓    ░░▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓                                                            ░░                                    ░░▓▓▒▒░░▒▒▒▒▒▒▒▒▒▒
@@ -1100,11 +1083,28 @@ while True:
 
 
 
-        
-        ''')
+'''
+while True:
+    
+    
+    maininput = input(f' Hyper@{username}> ').lower()
+    
+
+
+    if maininput == 'cls':
+        os.system('cls')
+        print(banner)
+
+
+    elif maininput == 'hyper':
         print('')
+        print(description)
+        print('')
+
+    elif maininput == 'hyper --anime show art':
+        print('')
+        print(anime)
+        print('')
+        
     else:
       os.system(f'{maininput}')
-
-
-    
