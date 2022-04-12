@@ -4,6 +4,8 @@ import platform
 import getpass
 from datetime import datetime
 import time
+import random
+from win10toast import ToastNotifier
 
 platform = platform.platform()
 
@@ -46,6 +48,7 @@ os.system('cls')
 print(banner)
 os.system('title Hyper - unofficialdxnny')
 
+
 while True:
     
 
@@ -57,4 +60,13 @@ while True:
         os.system('cls')
         print(banner)
 
-    
+    elif maininput == '':
+        print('')
+        print(' Please enter a command than press enter')
+        time.sleep(1)
+        os.system('cls')
+        print(banner)
+        print('')
+
+#    elif maininput == ['hyper hint', 'hyper hint ', ' hyper hint']:
+        
