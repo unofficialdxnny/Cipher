@@ -5,9 +5,12 @@ import getpass
 from datetime import datetime
 import time
 import random
-import cv2
-import numpy as np
 from playsound import playsound
+import curses
+from art import *
+import keyboard as kb
+import readchar
+import signal
 
 platform = platform.platform()
 
@@ -1093,17 +1096,27 @@ Hyper CLI - Help
 
 hyper :  This command shows the applications description
 hyper show art : This command prints asscii art to the terminal
-
+clear : This command allows user to clear condole with 'clear'
+hyper art : This command prints ASSCII art right in the terminal
 
 '''
+
+
+
+kb.block_key('ctrl')
+
 while True:  
     maininput = input(f' Hyper@{username}> ').lower()
     
 
 
     if maininput == 'cls':
-        os.system('cls')
-        print(banner)
+      os.system('cls')
+      print(banner)
+    
+    elif maininput == 'clear':
+      os.system('cls')
+      print(banner)
 
 
     elif maininput == 'hyper':
@@ -1118,7 +1131,17 @@ while True:
         print(anime)
         print('')
       
-    # elif maininput == 'hyper bad apple play.console':
+    elif maininput == 'hyper art':
+      tart = input('Type in the text here : ')
+      num = random.randint(1,5000)
+      for _ in range(num):
+        tprint(f'{tart}\n', font='random')
+
+
+  
+      
       
     else:
       os.system(f'{maininput}')
+   
+       
