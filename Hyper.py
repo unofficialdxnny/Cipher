@@ -3,14 +3,14 @@ import os
 import platform
 import getpass
 from datetime import datetime
-import time
 import random
 from playsound import playsound
-import curses
+import random
 from art import *
 import keyboard as kb
-import readchar
-import signal
+
+
+
 
 platform = platform.platform()
 
@@ -39,7 +39,7 @@ banner = f'''
 \033[94m ██║  ██║   ██║   ██║     ███████╗██║  ██║  
 \033[94m ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝
 \033[94m \033\033[94mCreated by unofficialdxnny \033[1;31m(\033[1;33mDanial Ahmed\033[1;31m)
-\033[93m Currently running on {platform}    
+\033[93m    
 '''
 
 
@@ -51,7 +51,7 @@ username = getpass.getuser()
 
 os.system('cls')
 print(banner)
-os.system('title Hyper - unofficialdxnny')
+os.system(f'title Hyper - unofficialdxnny ({platform})')
 
 description = '''
 Hyper CLI
@@ -1103,7 +1103,7 @@ hyper art : This command prints ASSCII art right in the terminal
 
 
 
-kb.block_key('ctrl')
+# kb.block_key('ctrl')
 
 while True:  
     maininput = input(f' Hyper@{username}> ').lower()
@@ -1132,15 +1132,28 @@ while True:
         print('')
       
     elif maininput == 'hyper art':
-      tart = input('Type in the text here : ')
+      tart = input(' Type in the text here : ')
       num = random.randint(1,5000)
       for _ in range(num):
         tprint(f'{tart}\n', font='random')
 
 
-  
+    elif maininput == 'hyper hint':
+      hintt = random.randint(1, 2)
+      if hintt == 1:
+        hint = ' test1'
+        print(f'{hint}')
+      elif hintt == 2:
+        hint = ' test2'
+        print(f'{hint}')
+
+        
+    
+    #    elif maininput == 'hyper bad-apple':
       
+
       
+
     else:
       os.system(f'{maininput}')
    
