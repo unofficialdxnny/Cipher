@@ -1133,7 +1133,8 @@ while True:
       
     elif maininput == 'hyper art':
       tart = input(' Type in the text here : ')
-      num = random.randint(1,5000)
+      amount = int(input(' How many styles? : '))
+      num = random.randint(1,amount)
       for _ in range(num):
         tprint(f'{tart}\n', font='random')
 
@@ -1141,10 +1142,23 @@ while True:
     elif maininput == 'hyper hint':
       hintt = random.randint(1, 2)
       if hintt == 1:
-        hint = ' test1'
+        hint = '''
+         Hint 1
+
+         If you type in the command 'hyper art'
+         you are able to print your text to asscii art.
+         There is no limit to how many styles you generate at once
+         
+         '''
         print(f'{hint}')
       elif hintt == 2:
-        hint = ' test2'
+        hint = ''' 
+        Hint 2
+        
+        
+        
+        
+        '''
         print(f'{hint}')
 
         
