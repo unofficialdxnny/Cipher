@@ -8,7 +8,8 @@ from playsound import playsound
 import random
 from art import *
 import keyboard as kb
-
+import sys
+import time
 
 
 
@@ -31,13 +32,18 @@ now = datetime.now()
  
    
 
-banner = f'''
- ██╗  ██╗██╗   ██╗██████╗ ███████╗██████╗             
- ██║  ██║╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗        
-\033[91m ███████║ ╚████╔╝ ██████╔╝█████╗  ██████╔╝  
-\033[94m ██╔══██║  ╚██╔╝  ██╔═══╝ ██╔══╝  ██╔══██╗
-\033[94m ██║  ██║   ██║   ██║     ███████╗██║  ██║  
-\033[94m ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝
+banner = f'''\033[96m\033[93m
+
+
+                 _/                      _/
+    _/_/_/                 _/_/_/       _/_/_/        _/_/       _/  _/_/
+ _/            _/         _/    _/     _/    _/    _/_/_/_/     _/_/
+_/            _/         _/    _/     _/    _/    _/           _/
+ _/_/_/      _/         _/_/_/       _/    _/      _/_/_/     _/
+                       _/
+                      _/
+
+
 \033[94m \033\033[94mCreated by unofficialdxnny \033[1;31m(\033[1;33mDanial Ahmed\033[1;31m)
 \033[93m    
 '''
@@ -51,18 +57,9 @@ username = getpass.getuser()
 
 os.system('cls')
 print(banner)
-os.system(f'title Hyper - unofficialdxnny ({platform})')
+os.system(f'title Cipher - unofficialdxnny ({platform})')
 
-description = '''
-Hyper CLI
-
-Hey! Im unofficialdxnny and this is 'Hyper'
-
-Hyper can be used to execute entered commands
-perform advanced administrative functions. 
-Hyper can also be used to troubleshoot and solve certain kinds of Windows issues.
-
-'''
+cwd = os.getcwd()
 
 anime = f'''
 
@@ -1091,14 +1088,27 @@ anime = f'''
 
 '''
 
-hyper_help = f'''
-Hyper CLI - Help
+description = '''
+Hyper CLI
 
-hyper :  This command shows the applications description
-hyper show art : This command prints asscii art to the terminal
+Hey! Im unofficialdxnny and this is 'Cipher'
+
+Cipher can be used to execute entered commands
+perform advanced administrative functions. 
+Cipher can also be used to troubleshoot and solve certain kinds of Windows issues.
+
+'''
+
+cipher_help = f'''---------------------------------
+
+cipher CLI - Help
+
+cipher :  This command shows the applications description
+cipher anime : This command prints asscii art to the terminal
 clear : This command allows user to clear condole with 'clear'
-hyper art : This command prints ASSCII art right in the terminal
-
+cls : This command allows user to clear condole with 'clear'
+cipher asscii 'your_word_here' #_of_styles : This command prints ASSCII art right in the terminal
+cipher cwd : This command will show your current directory
 '''
 
 
@@ -1106,8 +1116,16 @@ hyper art : This command prints ASSCII art right in the terminal
 # kb.block_key('ctrl')
 
 while True:  
-    maininput = input(f' Hyper@{username}> ').lower()
+
+    term1 = 'hint'
+    term2 = 'asscii'
+    term3 = 'cipher'
+    term4 = 'anime'
+    term5 = 'cwd'
+    maininput = input(f' Cipher@{username}> ').lower()
     
+    words = maininput.split()
+
 
 
     if maininput == 'cls':
@@ -1117,56 +1135,48 @@ while True:
     elif maininput == 'clear':
       os.system('cls')
       print(banner)
+    
+    
+    elif maininput == 'cipher':
+      print('')
+      print(description)
+      print('')
+      print(cipher_help)
+      print('')
 
+    
 
-    elif maininput == 'hyper':
+    elif term4 in words:
+      if words[0] != 'cipher':
+        print(" Make sure first string is 'cipher'")
         print('')
-        print(description)
-        print('')
-        print(hyper_help)
-        print('')
-
-    elif maininput == 'hyper --anime show art':
+      else:
         print('')
         print(anime)
         print('')
       
-    elif maininput == 'hyper art':
-      tart = input(' Type in the text here : ')
-      amount = int(input(' How many styles? : '))
-      num = random.randint(1,amount)
-      for _ in range(num):
-        tprint(f'{tart}\n', font='random')
-
-
-    elif maininput == 'hyper hint':
-      hintt = random.randint(1, 2)
-      if hintt == 1:
-        hint = '''
-         Hint 1
-
-         If you type in the command 'hyper art'
-         you are able to print your text to asscii art.
-         There is no limit to how many styles you generate at once
-         
-         '''
-        print(f'{hint}')
-      elif hintt == 2:
-        hint = ''' 
-        Hint 2
-        
-        
-        
-        
-        '''
-        print(f'{hint}')
-
-        
+    elif term2 in words:
+      if words[0] != 'cipher':
+        print(" Make sure first string is 'cipher'")
+        print('')
+      else:
+        print('')
+        print(words)
+        print('')
+        tart = words[2]
+        x = int(words[3])
+        amount = x
+        for _ in range(x):
+          tprint(f'{tart}\n', font='random')
     
-    #    elif maininput == 'hyper bad-apple':
-      
+    elif term5 in words:
+      if words[0] != 'cipher':
+        print(" Make sure first string is 'cipher'")
+        print('')
+      else:
+        print('')
+        print(f' The current working directory (cwd) is {cwd}')
 
-      
 
     else:
       os.system(f'{maininput}')
