@@ -10,6 +10,7 @@ from art import *
 import keyboard as kb
 import sys
 import time
+from googlesearch import search
 
 
 
@@ -1122,6 +1123,7 @@ while True:
     term3 = 'cipher'
     term4 = 'anime'
     term5 = 'cwd'
+    term6 = 'search'
     maininput = input(f' Cipher@{username}> ').lower()
     
     words = maininput.split()
@@ -1176,6 +1178,18 @@ while True:
       else:
         print('')
         print(f' The current working directory (cwd) is {cwd}')
+
+    elif term6 in words:
+      if words[0] != 'cipher':
+        print(" Make sure first string is 'cipher'")
+        print('')
+      else:
+        query = words[2]
+        for j in search(query, tld="co.in", num=13, stop=13, pause=2):
+          x = j.split()
+          print(x)
+          #print(j)
+        print('')
 
 
     else:
