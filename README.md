@@ -5,6 +5,9 @@
 Hyper is a Terminal written with Python.
 
 
+just install the exe from release
+or clone and edit 
+create pull request with your edit
 
 
 ## Authors
