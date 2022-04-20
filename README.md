@@ -2,12 +2,9 @@
 
 # Cipher 
 
-Hyper is a Terminal written with Python.
+Hyper is a Terminal command set for Mac/Linux/Windows written with Python.
+`Cipher` adds some useful commands directly to your terminal
 
-
-just install the exe from release
-or clone and edit 
-create pull request with your edit
 
 
 ## Authors
