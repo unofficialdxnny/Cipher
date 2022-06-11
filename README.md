@@ -5,7 +5,7 @@
 Hyper is a Terminal command set for Mac/Linux/Windows written with Python.
 `Cipher` adds some useful commands directly to your terminal
 
-
+this is a really silly script. the script lets u do some cool things but nothing useful
 
 ## Authors
 
